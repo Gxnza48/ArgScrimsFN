@@ -1,0 +1,189 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background-color: #111;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.elo {
+    font-family: "Timmana", sans-serif;
+}
+
+nav .logo a {
+    font-size: 44px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Timmana", sans-serif;
+    transition: color 0.3s ease-in;
+}
+
+nav .logo a:hover {
+    color: #800080;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(128, 128, 128, 0.623);
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+nav ul.nav-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #111;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+nav ul.nav-active li {
+    padding: 10px 20px;
+}
+
+nav ul.nav-active li a {
+    padding: 10px 20px;
+    display: block;
+}
+
+.toggle .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Elo Section Styles */
+.elo-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #1a1a1a;
+}
+
+.elo-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.7);
+}
+
+.leaderboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leaderboard {
+    width: 80%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
+}
+
+.leaderboard thead {
+    background: #800080;
+    color: #fff;
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.leaderboard tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.leaderboard tbody tr:hover {
+    background: rgba(128, 0, 128, 0.3);
+    cursor: pointer;
+}
+
+.leaderboard .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    border: 2px solid #fff;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
